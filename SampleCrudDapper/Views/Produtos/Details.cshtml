@@ -1,0 +1,52 @@
+﻿@model Produtos
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="card-header h1">Produto</h1>
+<div class="card-body" style="width: 600px;">
+    <div class="row">
+        <div class="col-8">
+            <div class="form-group">
+                <label asp-for="ProdutoId" class="control-label"></label><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-key" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="ProdutoId" class="form-control" disabled="disabled" />
+                </div>
+                <label asp-for="Nome" class="control-label"></label><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Nome" class="form-control" disabled="disabled" />
+                </div>
+                <label asp-for="Preco" class="control-label"></label><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Preco" class="form-control" disabled="disabled" />
+                </div>
+                <label asp-for="Estoque" class="control-label"></label><br />
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <input asp-for="Estoque" class="form-control" disabled="disabled" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

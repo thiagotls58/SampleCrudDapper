@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Produtos>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="card-header h1">Produtos</h1>
+<div id="divTableProdutos" class="card-body">
+    <div id="divBtnAdd">
+        <a asp-action="Add" class="btn btn-success">Add</a>
+    </div>
+    <table id="tableProdutos" class="table" style="margin-top: 10px;">
+        <thead>
+            <tr class="thead-dark">
+                <th scope="col">@Html.DisplayNameFor(model => model.ProdutoId)</th>
+                <th scope="col">@Html.DisplayNameFor(model => model.Nome)</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@Html.DisplayFor(modelItem => item.ProdutoId)</td>
+                    <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                    <td align="right">
+                        <a asp-action="Details" asp-route-id="@item.ProdutoId" class="btn btn-info">Details</a>
+                        <a asp-action="Edit" asp-route-id="@item.ProdutoId" class="btn btn-warning" style="margin-left: 10px;">Edit</a>
+                        <a asp-action="Delete" asp-route-id="@item.ProdutoId" class="btn btn-danger" style="margin-left: 10px;">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

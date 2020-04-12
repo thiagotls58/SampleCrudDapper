@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[Produtos]
+(
+	[ProdutoId] INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+	[Estoque] INT NOT NULL,
+	[Nome] VARCHAR(100) NOT NULL,
+	[Preco] DECIMAL(18,2) NOT NULL
+)
